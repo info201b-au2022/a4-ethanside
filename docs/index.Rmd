@@ -1,45 +1,133 @@
 ---
-title: "Your A4 Report Title (TODO: Revise title)"
-author: "Your Name"
+title: "Injustice in Our Justice System"
+author: "Ethan Side"
 date: '2022-11-01'
 output: html_document
 ---
 
 ```{r echo=FALSE, eval=TRUE, message=FALSE}
-source("../source/a4-helpers.R")
 source("../source/analysis.R")
 ```
 
 ## Abstract 
-[TODO: Include a short abstract (about 50 words)]
+The US justice system has been something that for centuries has set the country 
+apart yet over the last couple decades it has filled the prison and jail systems
+in an inequitable way. The following visualizations can shed some light n these 
+injustices. In hopes that awareness can be spread to help promote equity for all.
 
-# Test (TODO: Remove before submission!!)
-```{r echo=FALSE}
-q1_string <- test_query1()
-num <- 5
-```
-As you know, this is a markdown report. The [R Markdown Cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf) is **useful!**
 
-* Here's a test of a dynamic variable. Say **"`r q1_string`!!!** 
-* Here's another test. A vector
-of numbers: `r test_query2(num)`.
 
-Recall that _{r echo=TRUE}_ can be used to display the code, 
-which is very useful when developing and debugging a report. Here's an example: 
-
-```{r echo=TRUE}
-num <- 5
-sum <- sum(test_query2(num))
-print(sum)
-```
 
 ## Introduction 
-[TODO]
+The Vera Institute allows viewers of their data set to delve
+into decades worth of jail and prison populations from the United States
+of America and the states and counties within. The Vera Institute also
+allows us to see the total populations certain genders and races so that
+comparisons can be made in order for us to see possible injustices in
+the United States justice system. Direct stakeholders for a data set
+like this are policy makers, socially aware citizens. They can access a
+data set like this and cause change in society. A policy maker can see a
+march by a citizen and make change based off this kind of data.
+Indirectly those who are incarcerated might be able to be set free if
+certain laws were passed, and also indirectly would be every US citizen
+as their justice system could start to become more equitable if the
+direct stakeholders are able to harness the data in the right way. Some
+of the questions I will answer in this report are: What are certain
+states jail populations over a quarter decade? How has the US Prison
+population fluctuated over a quarter decade? What counties in Alabama
+disenfranchise African-Americans?
 
 ## Data Summary 
-[TODO]
+Summary In this report we cover total US prison populations
+all the way down to certain county statistics to get to know the US
+prison system on a large and small scale. Despite not being the second
+most populous race in Washington they are the second most jailed, the
+*black* population in Washington is second in all counties except 4. The
+most inequitable county in Alabama is *Winston* with an 11.08 inequality
+rate. 11 times more inequitable than an equal rate of 1.00. Which year
+did the prison populations of Washington, Mississippi, Illinois, and
+Pennsylvania reach its peak? *1999*, this could be a culmination of
+things but race riots over the last decade in a massive city like
+Chicago would be a reason for this year being the peak.
 
-[TODO ... other sections ... See Canvas for details]
 
-_All the very best with your work!_
+
+## Growth of U.S. Prison Population
+```{r}
+
+chart3
+
+```
+
+__United States prison population over a 26 year period from 1990 to 2016__
+
+The key takeaway from this graph is the steady upward trend until the
+change of the millennium with a small decrease in 2000 and 2001. The
+graph continues almost a plateau for the next decade until 2012 when a
+steep decrease in the prison population starts to occur. Why was there a
+steady decrease after 2012? This could be due to the legalization of
+marijuana around this time in the states of Washington and Colorado.
+Decriminalization of the drug became popularized at this time as well.
+
+
+# Section 4: Growth of Prison Population by State
+
+```{r}
+
+chart4
+```
+
+__Prison Populations from 1990 to 2016 in Washington, Mississippi,__
+__Illinois, and Pennsylvania__
+
+Why the stark difference in incarcerated
+totals? These four states all in different regions of the United States
+have differing state populations and answer the question of the large
+range between each state. Another sore thumb in this data set is the
+massive upswing in incarcerations in Illinois during the 90s. This could
+be because of the general growth of the state's population but is more
+likely due to race riots happening during that era and more brutal
+police enforcement, especially in large urban areas like Chicago. This
+uptick is noticeable in Pennsylvania too.
+
+
+# Section 5: Washington State Jail Distribution is Unequitable
+
+```{r}
+plot5
+```
+
+__Washington counties max jail population by race in 2018__
+
+
+When it comes to each counties max jail population in the latest year we
+have data for what is the order that the races come in? In other words
+is there a consistent pattern of races when it comes to the hierarchy of
+jail populations. As it turns out in the state of Washington most
+counties, in descending order, tend to go from white, black, latinx, to
+Asian-american pacific islanders. This ordering is intriguing as latinx
+populations in Washington are second only to the white population. In
+counties like Yakima and Skagit this swap between the black max and the
+latinx max exist resulting in what should be a better representation of
+the Washington population. The black community being the second highest
+prison populator is a major inequality in the state.
+
+# Section 6: African-American Inequality in the Jail Population of Alabama Counties
+
+```{r}
+plot6
+```
+
+__Alabama racial inequalities toward African-Americans over the last 30 years by county__
+
+Which counties in a deep south state like Alabama don't have racial
+inequalities in their jail toward African Americans? To answer this
+question we refer to the legend on the map with a lighter color meaning
+harsher inequalities and darker meaning the jail population of
+African-Americans more closely represents the counties population of
+African-Americans. Sadly the answer to the previous question is there
+are no counties in Alabama that don't have some kind of injustice when
+it comes to the jailing of African-Americans. While some are close to
+the magic number of 1 every county is above that equality standard
+making every county having jailing biases.
 
